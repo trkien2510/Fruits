@@ -8,7 +8,6 @@ public class SpawnFruits1 : MonoBehaviour
     float time = 0;
     void Start()
     {
-        
     }
     void Update()
     {
