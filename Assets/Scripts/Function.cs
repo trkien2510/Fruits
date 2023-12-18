@@ -8,6 +8,7 @@ public class Function : MonoBehaviour
 {
     float playerScore;
     public Text scoreText;
+    public GameObject player;
     public GameObject gameOverScene;
     public GameObject startGame;
     public GameObject dropFruits;
@@ -21,9 +22,15 @@ public class Function : MonoBehaviour
         dropFruits.SetActive(false);
     }
     public void restartGame(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameObject playerPrefab = Instantiate(player, new Vector2(0f, -3.2f), transform.rotation);
+        playerPrefab.SetActive(true);
+        scoreText.text = 0.ToString();
+        gameOverScene.SetActive(false);
+        dropFruits.SetActive(true);
     }
     public void playGame(){
+        GameObject playerPrefab = Instantiate(player, new Vector2(0f, -3.2f), transform.rotation);
+        playerPrefab.SetActive(true);
         startGame.SetActive(false);
         dropFruits.SetActive(true);
     }

@@ -14,7 +14,7 @@ public class DropBomb : MonoBehaviour
 
     void Update()
     {
-        transform.position = transform.position + (Vector3.down * fallingSpeed) * Time.deltaTime;
+        transform.position = transform.position + Vector3.down * fallingSpeed * Time.deltaTime;
         if (transform.position.y < -8)
         {
             Destroy(gameObject);

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fruits
   - Spawn
+  - ClonePlayer
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,7 @@ using Unity.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerPrefab : MonoBehaviour
 {
     private Function function;
     private Rigidbody2D rb;
@@ -15,14 +15,11 @@ public class Player : MonoBehaviour
     private float moveSpeed = 5f;
     private bool lookRight = true;
     private bool canJump;
-    private float x, y;
     void Start()
     {
         function = GameObject.FindGameObjectWithTag("GameController").GetComponent<Function>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        x = transform.position.x;
-        y = transform.position.y;
     }
     void Update()
     {
